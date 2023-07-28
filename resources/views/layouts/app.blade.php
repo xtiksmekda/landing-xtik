@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicons -->
-    <link href="https://avatars.githubusercontent.com/u/76462435?v=4" rel="icon">
+    <link href="{{ $logo }}" rel="icon">
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <script src="assets/js/three.r134.min.js"></script>

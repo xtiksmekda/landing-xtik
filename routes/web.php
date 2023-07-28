@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', [
 
+        //logo Header dan Profile
+        'logo' => 'https://ugc.production.linktr.ee/Xa5XAyISLK8YAShaYKje_A90y1AMSCMMtZs7f',
+
         //bebas mau diganti apa aja musiknya hehe
         //hosted on cloud.ryzendesu.com
         'judul_lagu' => 'Orange',

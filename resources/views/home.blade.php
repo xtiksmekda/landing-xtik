@@ -6,7 +6,7 @@
     <div id="vanta-bg">
         <header>
             <div>
-                <img src="https://ugc.production.linktr.ee/Xa5XAyISLK8YAShaYKje_A90y1AMSCMMtZs7f" alt="Pincang" />
+                <img src="{{ $logo }}" alt="Pincang" />
             </div>
             <h3> @XTIK_SMEKDA </h3>
             <br>
