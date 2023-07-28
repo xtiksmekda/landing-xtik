@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
+@section('header','XTIK - LANDING')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Favicons -->
-    <link href="https://avatars.githubusercontent.com/u/76462435?v=4" rel="icon">
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <script src="assets/js/three.r134.min.js"></script>
-    <script src="assets/js/vanta.halo.min.js"></script>
-
-    <video id="bg-video" muted loop autoplay poster="assets/poster.png">
-        <source src="https://github.com/lknknm/link-in-bio/raw/main/assets/links-bg.webm" type="video/webm">
-    </video>
-    <div class="overlay"></div>
-    <title>XTIK - LANDING</title>
-</head>
-
+@section('content')
 <body>
     <div id="vanta-bg">
         <header>
@@ -39,22 +21,22 @@
                         <!--Button Music Player-->
                         <li class="accordion_item">
                             <div class="accordion_header">
-                                <span>Listen to "Orange"</span>
+                                <span>Listen to "{{ $judul_lagu }}"</span>
                                 <span class="icon">+</span>
                             </div>
                             <div class="accordion_content">
                                 <div class="album_info">
                                     <a class="album_link" href="" target="_blank" rel="noopener">
-                                        <img class="album_cover_art" src="assets/img/orange.jpg" filter="none">
+                                        <img class="album_cover_art" src="{{ $cover_lagu }}" filter="none">
                                         <div class="album_title">
-                                            <h1 style="color:grey">7!!</h1>
-                                            <h3 style="color:grey">Orange</h3>
+                                            <h1 style="color:grey">{{ $Pencipta_lagu }}</h1>
+                                            <h3 style="color:grey">{{ $judul_lagu }}</h3>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="available_stream">
                                     <audio id="song" class="block w-full max-w-md mx-auto" controls>
-                                        <source src="{{ $music }}"
+                                        <source src="{{ $link_musik }}"
                                             type="audio/mp3">
                                     </audio>
                                     <p style="color:grey;">Available on all streaming platforms</p>
@@ -65,7 +47,7 @@
                                         <!--Change links below if needed-->
                                         <li class="stream_buttons">
                                             <a target="_blank"
-                                                href="https://open.spotify.com/track/21htkjP5rYjD3CXG3y9wCT" style="color:#374151; width: 100%; height: 100%; 
+                                                href="{{ $spotify }}" style="color:#374151; width: 100%; height: 100%; 
                                             display: flex; justify-content: space-between;">
                                                 <img src="assets/img/spotify.svg" width="20"
                                                     style="margin-right: 20px;" />
@@ -75,7 +57,7 @@
                                             </a>
                                         </li>
                                         <li class="stream_buttons">
-                                            <a target="_blank" href="https://music.apple.com/us/album/orange/982659827"
+                                            <a target="_blank" href="{{ $apple_music }}"
                                                 style="color:#374151; width: 100%; display: flex; justify-content: space-between;">
                                                 <img src="assets/img/apple.svg" height="20" style="margin-right: 20px;" />
                                                 Apple Music
@@ -84,7 +66,7 @@
                                             </a>
                                         </li>
                                         <li class="stream_buttons">
-                                            <a target="_blank" href="https://tidal.com/browse/track/144294816"
+                                            <a target="_blank" href="{{ $tidal }}"
                                                 style="color:#374151; width: 100%; display: flex; justify-content: space-between;">
                                                 <img src="assets/img/tidal.svg" height="20" style="margin-right: 20px;" />
                                                 TIDAL
@@ -93,7 +75,7 @@
                                             </a>
                                         </li>
                                         <li class="stream_buttons">
-                                            <a target="_blank" href="https://www.deezer.com/en/track/976030142"
+                                            <a target="_blank" href="{{ $deezer }}"
                                                 style="color:#374151; width: 100%; display: flex; justify-content: space-between;">
                                                 <img src="assets/img/deezer.svg" height="20"
                                                     style="margin-right: 20px;" />
@@ -104,7 +86,7 @@
                                         </li>
                                         <li class="stream_buttons">
                                             <a target="_blank"
-                                                href="https://music.youtube.com/watch?v=O48gok_FLCg&list=RDAMVMO48gok_FLCg"
+                                                href="{{ $yt_music }}"
                                                 style="color:#374151; width: 100%; display: flex; justify-content: space-between;">
                                                 <img src="assets/img/youtube_music.svg" height="20"
                                                     style="margin-right: 20px;" />
@@ -114,7 +96,7 @@
                                             </a>
                                         </li>
                                         <li class="stream_buttons">
-                                            <a target="_blank" href="https://music.amazon.com/albums/B00VDO364Y"
+                                            <a target="_blank" href="{{ $amazon_music }}"
                                                 style="color:#374151; width: 100%; display: flex; justify-content: space-between;">
                                                 <img src="assets/img/amazon_music.svg" height="20"
                                                     style="margin-right: 20px;" />
@@ -127,29 +109,6 @@
                                 </div>
                             </div>
                         </li>
-                        <!--Button Project-->
-                        <!--<li class="accordion_item">
-                            <div class="accordion_header">
-                                <span>My Projects</span>
-                                <span class="icon">+</span>
-                            </div>
-                            <div class="accordion_content">
-
-                                <div class="stream_buttons_list">
-                                    <ul>
-                                        <li class="stream_buttons">
-                                            <a target="_blank"
-                                                href="https://api.whatsapp.com/send/?phone=6285864034767&text=.register&type=phone_number&app_absent=0"
-                                                style="color:#374151; width: 100%; height: 100%; 
-                                                    display: flex; justify-content: space-between;">
-                                                <img src="assets/img/whangsaff.svg" width="20" style="margin-right: 20px;" />
-                                                <p>WA BOT (Nao-Botz V5)</p>
-                                                <img src="assets/img/open.svg" width="20" height="20"
-                                                    style="margin-left: auto" />
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>-->
                         <!--Button Social Media-->
                         <li class="link_button">
                             <a target="_blank" href="{{ $website }}">
@@ -213,13 +172,5 @@
             </section>
 
         </main>
-
-        <footer>
-            <p>Made with ❤️ by <a href="https://github.com/ShirokamiRyzen">Fatih Firdaus</a> for <a href="{{ $website }}">XTIK SMEKDA</a></p>
-        </footer>
-
-    </div>
-    <script src="assets/js/accordion.js"></script>
-</body>
-
-</html>
+        <script src="assets/js/accordion.js"></script>
+@endsection
