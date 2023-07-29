@@ -36,7 +36,7 @@ Route::get('/', function () {
         'amazon_music' => 'https://music.amazon.com/albums/B00VDO364Y',
 
         //bebas mau lu ganti apa hehe
-        'website' => 'https://www.xtikmedia.my.id/tentangxtik',
+        'website' => 'https://www.xtiksmkn2pwk.my.id/',
         'instagram' => 'https://www.instagram.com/xtiksmekda',
         'youtube' => 'https://www.youtube.com/@xtiksmekda',
         'facebook' => 'https://www.facebook.com/xtiksmekda',
