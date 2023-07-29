@@ -8,7 +8,7 @@
             <div>
                 <img src="{{ $logo }}" alt="Pincang" />
             </div>
-            <h3> @XTIK_SMEKDA </h3>
+            <h3> X-TIK SMK Negeri 2 Purwakarta </h3>
             <br>
             <br>
             <p>Tempat Inovasi Penuh Karya</p>
