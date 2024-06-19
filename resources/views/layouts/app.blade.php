@@ -23,7 +23,7 @@
 @yield('content')
 
 <footer>
-    <p>Made with ❤️ by <a href="https://github.com/ShirokamiRyzen">Fatih Firdaus</a> for <a href="{{ $website }}">XTIK SMEKDA</a></p>
+    <p>Made with ❤️ by <a href="https://github.com/ShirokamiRyzen">Fatih Firdaus</a> for <a href="{{ $website }}">X-TIK</a></p>
 </footer>
 
 </div>
