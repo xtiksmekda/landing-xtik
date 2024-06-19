@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('header','XTIK - LANDING')
+@section('header','X-TIK SMKN 2 Purwakarta | LANDING')
 
 @section('content')
 <body>
     <div id="vanta-bg">
         <header>
             <div>
-                <img src="{{ $logo }}" alt="Pincang" />
+                <img src="{{ $logo }}" alt="X-TIK" />
             </div>
             <h3> X-TIK SMK Negeri 2 Purwakarta </h3>
             <br>
